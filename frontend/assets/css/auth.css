@@ -1,0 +1,36 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: white;
+  padding: 30px 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background: #f8fafc;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+}

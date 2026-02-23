@@ -1,0 +1,185 @@
+/* ============================= */
+/* PAGE CONTAINER */
+/* ============================= */
+
+.page-container {
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.course-container {
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+/* ============================= */
+/* CREATE COURSE */
+/* ============================= */
+
+.type-select {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.type-select button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.type-select button.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* ============================= */
+/* COURSE DETAIL */
+/* ============================= */
+
+.course-header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.course-video {
+    flex: 1;
+    background: #000;
+    border-radius: 16px;
+    height: 320px;
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-info h2 {
+    margin-bottom: 10px;
+}
+
+.course-meta {
+    color: var(--gray);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.price-box {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-top: 30px;
+}
+
+.price-box h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #f59e0b;
+    margin-bottom: 10px;
+}
+
+/* ============================= */
+/* BUY TOKENS */
+/* ============================= */
+
+.tokens-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.plan-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-card h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.plan-card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.highlight {
+    border: 2px solid var(--primary);
+}
+
+.highlight h3 {
+    color: var(--primary);
+}
+
+/* ============================= */
+/* PROFILE */
+/* ============================= */
+
+.profile-container {
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.profile-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--light-gray);
+}
+
+.token-badge {
+    background: var(--primary);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* ============================= */
+/* COMMON FULL WIDTH BUTTON */
+/* ============================= */
+
+.btn-full {
+    width: 100%;
+    margin-top: 15px;
+}
