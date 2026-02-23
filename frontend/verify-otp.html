@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify OTP | SkillSwap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .otp-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6366f1, #06b6d4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .otp-card {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .otp-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .otp-card p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .otp-inputs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .otp-inputs input {
+            width: 55px;
+            height: 55px;
+            font-size: 22px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid var(--light-gray);
+            transition: 0.2s;
+        }
+
+        .otp-inputs input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .resend {
+            margin-top: 15px;
+            font-size: 13px;
+            color: var(--gray);
+        }
+
+        .resend span {
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        .timer {
+            font-size: 13px;
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+
+<section class="otp-section">
+    <div class="otp-card">
+
+        <h2>Email Verification</h2>
+        <p>Enter the 6-digit code sent to your email address.</p>
+
+        <div class="timer">
+            Code expires in <span id="countdown">60</span> seconds
+        </div>
+
+        <form id="otpForm">
+
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" required>
+                <input type="text" maxlength="1" required>
+                <input type="text" maxlength="1" required>
+                <input type="text" maxlength="1" required>
+                <input type="text" maxlength="1" required>
+                <input type="text" maxlength="1" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+                Verify OTP
+            </button>
+
+        </form>
+
+        <div class="resend">
+            Didn't receive the code? <span onclick="resendOTP()">Resend</span>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    const inputs = document.querySelectorAll(".otp-inputs input");
+
+    inputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+            if (input.value.length === 1 && index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        });
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace" && index > 0 && input.value === "") {
+                inputs[index - 1].focus();
+            }
+        });
+    });
+
+    document.getElementById("otpForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        let otp = "";
+        inputs.forEach(input => otp += input.value);
+        alert("OTP entered: " + otp + "\nAPI will connect here.");
+    });
+
+    // Countdown Timer
+    let timeLeft = 60;
+    const countdown = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+        timeLeft--;
+        countdown.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            countdown.textContent = "Expired";
+        }
+    }, 1000);
+
+    function resendOTP() {
+        alert("Resend OTP API will connect here.");
+    }
+</script>
+
+</body>
+</html>
