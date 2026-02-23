@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Course | SkillSwap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .page-container {
+            max-width: 800px;
+            margin: 60px auto;
+        }
+
+        .card {
+            padding: 40px;
+        }
+
+        .type-select {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .type-select button {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid var(--light-gray);
+            background: white;
+            cursor: pointer;
+        }
+
+        .type-select button.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn-full {
+            width: 100%;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container page-container">
+    <div class="card">
+
+        <h2>Create New Course</h2>
+        <br>
+
+        <form id="courseForm">
+
+            <div class="input-group">
+                <label>Course Title</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>Description</label>
+                <textarea rows="4" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Token Price</label>
+                <input type="number" required>
+            </div>
+
+            <label>Course Type</label>
+            <div class="type-select">
+                <button type="button" class="active" onclick="selectType(this, 'live')">Live</button>
+                <button type="button" onclick="selectType(this, 'recorded')">Recorded</button>
+            </div>
+
+            <input type="hidden" id="courseType" value="live">
+
+            <div class="input-group">
+                <label>Upload Video (Recorded only)</label>
+                <input type="file">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+                Create Course
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+<script>
+function selectType(button, type) {
+    document.querySelectorAll(".type-select button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+    document.getElementById("courseType").value = type;
+}
+
+document.getElementById("courseForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Course creation API will connect here.");
+});
+</script>
+
+</body>
+</html>

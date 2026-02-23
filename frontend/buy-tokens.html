@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Tokens | SkillSwap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .tokens-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .tokens-container h2 {
+            margin-bottom: 10px;
+        }
+
+        .tokens-container p {
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .plan-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .plan-card h3 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .plan-card p {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        .highlight {
+            border: 2px solid var(--primary);
+        }
+
+        .highlight h3 {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container tokens-container">
+
+    <h2>Buy Tokens</h2>
+    <p>Purchase tokens to enroll in premium courses and live sessions.</p>
+
+    <div class="plans-grid">
+
+        <div class="plan-card">
+            <h3>100</h3>
+            <p>₹199</p>
+            <button class="btn btn-outline btn-full">
+                Buy Now
+            </button>
+        </div>
+
+        <div class="plan-card highlight">
+            <h3>250</h3>
+            <p>₹449</p>
+            <button class="btn btn-primary btn-full">
+                Buy Now
+            </button>
+        </div>
+
+        <div class="plan-card">
+            <h3>500</h3>
+            <p>₹799</p>
+            <button class="btn btn-outline btn-full">
+                Buy Now
+            </button>
+        </div>
+
+        <div class="plan-card">
+            <h3>1000</h3>
+            <p>₹1499</p>
+            <button class="btn btn-outline btn-full">
+                Buy Now
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    const buttons = document.querySelectorAll(".plan-card button");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", function(){
+            alert("Razorpay integration will connect here.");
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Detail | SkillSwap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .course-container {
+            max-width: 1000px;
+            margin: 60px auto;
+        }
+
+        .course-header {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .course-video {
+            flex: 1;
+            background: #000;
+            border-radius: 16px;
+            height: 320px;
+        }
+
+        .course-info {
+            flex: 1;
+        }
+
+        .course-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .course-meta {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .price-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-top: 30px;
+        }
+
+        .price-box h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .btn-full {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .description {
+            margin-top: 40px;
+        }
+
+        .rating {
+            color: #f59e0b;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container course-container">
+
+    <div class="course-header">
+
+        <div class="course-video">
+            <!-- Later: embed Cloudinary video or Jitsi -->
+        </div>
+
+        <div class="course-info">
+            <h2>Advanced JavaScript Mastery</h2>
+
+            <div class="rating">★★★★★ (4.8)</div>
+
+            <div class="course-meta">
+                Instructor: John Doe <br>
+                Type: Live <br>
+                Enrolled: 120 students
+            </div>
+
+            <div class="price-box">
+                <h3>120 Tokens</h3>
+                <button class="btn btn-primary btn-full">
+                    Enroll Now
+                </button>
+                <button class="btn btn-outline btn-full">
+                    Join Live Session
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="description">
+        <h3>Course Description</h3>
+        <p>
+            This advanced course dives deep into JavaScript internals,
+            closures, async programming, performance optimization,
+            and real-world project architecture.
+        </p>
+    </div>
+
+</div>
+
+<script>
+    // Placeholder for enrollment logic
+    document.querySelector(".btn-primary").addEventListener("click", function(){
+        alert("Enrollment API will connect here.");
+    });
+</script>
+
+</body>
+</html>

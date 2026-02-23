@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile | SkillSwap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .profile-container {
+            max-width: 900px;
+            margin: 60px auto;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #e2e8f0;
+        }
+
+        .token-badge {
+            background: var(--primary);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        .skills-input {
+            margin-bottom: 15px;
+        }
+
+        .btn-full {
+            width: 100%;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container profile-container">
+
+    <div class="profile-card">
+
+        <div class="profile-header">
+            <div class="profile-pic"></div>
+            <div>
+                <h2>John Doe</h2>
+                <div class="token-badge">250 Tokens</div>
+            </div>
+        </div>
+
+        <form id="profileForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" value="John Doe">
+            </div>
+
+            <div class="input-group">
+                <label>Bio</label>
+                <textarea rows="4">Passionate developer and instructor.</textarea>
+            </div>
+
+            <div class="input-group skills-input">
+                <label>Skills You Can Teach</label>
+                <input type="text" placeholder="e.g. Python, UI Design, Marketing">
+            </div>
+
+            <div class="input-group skills-input">
+                <label>Skills You Want to Learn</label>
+                <input type="text" placeholder="e.g. Blockchain, Data Science">
+            </div>
+
+            <div class="input-group">
+                <label>Upload Profile Picture</label>
+                <input type="file">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+                Save Changes
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    document.getElementById("profileForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("Profile update API will connect here.");
+    });
+</script>
+
+</body>
+</html>
