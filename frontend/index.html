@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SkillSwap | Learn. Teach. Earn.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Gradient Overrides */
 
+        .hero-section {
+            background: linear-gradient(135deg, #6366f1, #06b6d4);
+            color: white;
+            padding: 120px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons .btn {
+            margin-right: 15px;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            padding: 100px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="container nav-content">
+        <div class="logo">SkillSwap</div>
+        <div class="nav-links">
+            <a href="#">Courses</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-section">
+    <div class="container hero-content">
+        <div>
+            <h1>Learn Anything.<br>Teach Everything.<br>Earn Tokens.</h1>
+            <p>
+                SkillSwap is a next-generation learning marketplace
+                where knowledge becomes currency.
+                Teach skills. Join live sessions. Grow together.
+            </p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn btn-primary">Start Learning</a>
+                <a href="#features" class="btn btn-outline">Explore Features</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h3>🚀 Live Classes</h3>
+            <p>Integrated Jitsi-powered real-time sessions.</p>
+            <br>
+            <h3>💰 Token Economy</h3>
+            <p>Buy, earn and use tokens seamlessly.</p>
+            <br>
+            <h3>🌎 Global Learning</h3>
+            <p>Connect instructors and learners worldwide.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+    <div class="container">
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>🎓 Create Courses</h3>
+                <p>Upload video courses via Cloudinary and monetize your expertise instantly.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📹 Live Sessions</h3>
+                <p>Host interactive sessions using secure embedded video rooms.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔐 Secure Authentication</h3>
+                <p>Email-based OTP verification for safe onboarding and login.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💳 Integrated Payments</h3>
+                <p>Buy tokens via Razorpay or Stripe in seconds.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⭐ Reviews & Ratings</h3>
+                <p>Students can review instructors and courses transparently.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📊 Smart Dashboard</h3>
+                <p>Track earnings, enrollments, sessions, and token usage.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Ready to Build Your Knowledge Empire?</h2>
+    <p>Join thousands of learners and instructors shaping the future of education.</p>
+    <a href="register.html" class="btn btn-primary">Create Free Account</a>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 SkillSwap. All rights reserved.
+</div>
+
+</body>
+</html>
