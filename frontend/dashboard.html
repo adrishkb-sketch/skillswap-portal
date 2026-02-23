@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | SkillSwap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .dashboard {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 240px;
+            background: #0f172a;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        .sidebar a:hover {
+            color: white;
+        }
+
+        .main-content {
+            flex: 1;
+            background: #f8fafc;
+            padding: 40px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .stat-card h3 {
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+        <h2>SkillSwap</h2>
+
+        <a href="#">Dashboard</a>
+        <a href="create-course.html">Create Course</a>
+        <a href="course-detail.html">My Courses</a>
+        <a href="buy-tokens.html">Buy Tokens</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html">Logout</a>
+    </div>
+
+    <div class="main-content">
+
+        <div class="topbar">
+            <h1>Dashboard</h1>
+            <div>👤 Username</div>
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h3>12</h3>
+                <p>Enrolled Courses</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>3</h3>
+                <p>Live Sessions</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>250</h3>
+                <p>Tokens Available</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>8</h3>
+                <p>Courses Created</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
